@@ -91,6 +91,7 @@ void print_prop(tmx_property *p, void *depth) {
 		case PT_NONE:   printf("none");    break;
 		case PT_INT:    printf("integer"); break;
 		case PT_FLOAT:  printf("float");   break;
+		case PT_OBJECT: printf("object");  break;
 		case PT_BOOL:   printf("bool");    break;
 		case PT_STRING: printf("string");  break;
 		case PT_COLOR:  printf("color");   break;
@@ -103,6 +104,7 @@ void print_prop(tmx_property *p, void *depth) {
 		case PT_FLOAT:  printf("%f", p->value.decimal); break;
 		case PT_BOOL:   printf(p->value.integer? "true": "false"); break;
 		case PT_COLOR:  printf("#%.6X", p->value.color); break;
+		case PT_OBJECT: printf("%u", p->value.id); break;
 		case PT_NONE:
 		case PT_STRING:
 		case PT_FILE:

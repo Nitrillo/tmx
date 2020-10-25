@@ -439,6 +439,9 @@ enum tmx_property_type parse_property_type(const char *propertytype) {
 	if (!strcmp(propertytype, "file")) {
 		return PT_FILE;
 	}
+	if (!strcmp(propertytype, "object")) {
+		return PT_OBJECT;
+	}
 	return PT_NONE;
 }
 
