@@ -50,7 +50,7 @@ endif()
 
 include(FindLibXml2)
 find_package(LibXml2 REQUIRED)
-target_link_libraries(tmx LibXml2::LibXml2)
+target_link_libraries(tmx LibXml2)
 
 # -- Build
 
